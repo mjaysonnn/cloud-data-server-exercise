@@ -15,22 +15,22 @@ import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 
-public class WordCount {
+public class FilmNoirCount {
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
 
         // Create a new job
         Job job = Job.getInstance(conf, "wordcount");
 
-        // Use the WordCount.class file to point to the job jar
-        job.setJarByClass(WordCount.class);
+        // Use the FilmNoirCount.class file to point to the job jar
+        job.setJarByClass(FilmNoirCount.class);
 
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
 
         job.setMapperClass(Map.class);
         job.setReducerClass(Reduce.class);
-        
+
         job.setNumReduceTasks(1);
 
         job.setInputFormatClass(TextInputFormat.class);
