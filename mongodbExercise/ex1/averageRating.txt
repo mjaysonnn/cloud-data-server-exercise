@@ -1,0 +1,4 @@
+db.ratings.aggregate([ 
+{$group: {_id:{movieId:"$movieId", userId:"$userId"}, totalRate: {$sum: "$rating"}}},
+{$group: {_id:"$_id.movieId", avgRate: {$avg: "$totalRate"}}},
+])
