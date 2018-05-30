@@ -1,0 +1,4 @@
+db.movies.aggregate([ 
+{$group: {_id:"$title"}}, 
+{$count: "result"}
+])
