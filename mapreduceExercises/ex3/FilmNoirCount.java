@@ -20,7 +20,7 @@ public class FilmNoirCount {
         Configuration conf = new Configuration();
 
         // Create a new job
-        Job job = Job.getInstance(conf, "wordcount");
+        Job job = Job.getInstance(conf, "FilmNoirCount");
 
         // Use the FilmNoirCount.class file to point to the job jar
         job.setJarByClass(FilmNoirCount.class);
