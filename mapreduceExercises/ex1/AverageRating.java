@@ -67,7 +67,7 @@ public class AverageRating {
             float sum = 0.0F;
             int count = 0;
             for (FloatWritable value : values) {
-                sum += valuei.get();
+                sum += value.get();
                 count++;
             }
 
