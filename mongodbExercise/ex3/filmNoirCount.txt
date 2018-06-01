@@ -2,11 +2,3 @@ db.movies.aggregate([
   {$match: {genres: {$regex:".*Film-Noir.*"}}},
   {$count: "result"}
 ])
-
-
-db.movies.aggregate([ 
-  {$project: {genre: {$split: ["$genres", "|"]}}},
-  {$unwind : "$genre"},
-  {$match: {genre: "Film-Noir"}},
-  {$count: "result"}
-])
