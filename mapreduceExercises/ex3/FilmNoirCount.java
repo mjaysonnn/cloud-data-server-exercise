@@ -56,7 +56,7 @@ public class FilmNoirCount {
             String[] genres = lastField.split("\\|");
 
             for (String genre : genres) {
-                if (genre.equals("Film-Noir")) {
+                if (genre.contains("Film-Noir")) {
                     word.set(genre);
                     context.write(word, one);
                 }
