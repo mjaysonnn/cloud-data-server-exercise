@@ -57,7 +57,7 @@ public class FilmNoirCount {
 
             for (String genre : genres) {
                 if (genre.contains("Film-Noir")) {
-                    word.set(genre);
+                    word.set("Film-Noir");
                     context.write(word, one);
                 }
             }
